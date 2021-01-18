@@ -1,25 +1,48 @@
 import * as React from "react";
 import * as dfn from "date-fns";
 
+interface Settings {
+  pageWidth: number;
+  pageHeight: number;
+  boxMargin: number;
+  boxWidth: number;
+  boxHeight: number;
+  textXAdj: number;
+  textYAdj: number;
+  fontSize: number;
+  boxStrokeWidth: number;
+}
+
+export const defaultSettings: Settings = {
+  pageWidth: 297,
+  pageHeight: 210,
+  boxMargin: 5,
+  boxWidth: 25,
+  boxHeight: 25,
+  textXAdj: 0,
+  textYAdj: 0,
+  fontSize: 12,
+  boxStrokeWidth: 1,
+};
+
 function SVGCalendar({
   date,
-  boxMargin = 5,
-  boxWidth = 25,
-  boxHeight = boxWidth,
-  textXAdj = 0,
-  textYAdj = 0,
-  fontSize = 12,
-  boxStrokeWidth = 1,
+  settings,
 }: {
   date: Date;
-  boxMargin?: number;
-  boxWidth?: number;
-  boxHeight?: number;
-  textXAdj?: number;
-  textYAdj?: number;
-  fontSize?: number;
-  boxStrokeWidth?: number;
+  settings: Partial<Settings>;
 }) {
+  const {
+    pageWidth,
+    pageHeight,
+    boxHeight,
+    boxMargin,
+    boxStrokeWidth,
+    boxWidth,
+    fontSize,
+    textXAdj,
+    textYAdj,
+  } = { ...defaultSettings, ...settings };
   const textXOff = boxWidth / 2 + textXAdj;
   const textYOff = boxHeight / 2 + textYAdj;
   const boxes: React.ReactNode[] = [];
@@ -67,7 +90,7 @@ function SVGCalendar({
     }
   }
   return (
-    <svg viewBox="0 0 297 210">
+    <svg viewBox={`0 0 ${pageWidth} ${pageHeight}`}>
       <g transform="translate(20 30)">
         {headings}
         {boxes}
@@ -75,4 +98,5 @@ function SVGCalendar({
     </svg>
   );
 }
+
 export default SVGCalendar;

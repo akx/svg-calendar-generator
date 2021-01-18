@@ -2,21 +2,13 @@ import * as React from "react";
 import * as ReactDOMServer from "react-dom/server";
 import "./styles.css";
 import * as dfn from "date-fns";
-import SVGCalendar from "./SVGCalendar";
+import SVGCalendar, { defaultSettings } from "./SVGCalendar";
 import { useTweaks } from "use-tweaks";
 
 export default function App() {
-  const props = useTweaks({
-    boxMargin: 5,
-    boxWidth: 25,
-    boxHeight: 25,
-    boxStrokeWidth: 1,
-    textXAdj: 0,
-    textYAdj: 0,
-    fontSize: 12,
-  });
+  const settings = useTweaks({ ...defaultSettings });
   const [date, setDate] = React.useState(() => new Date());
-  const el = <SVGCalendar date={date} {...props} />;
+  const el = <SVGCalendar date={date} settings={settings} />;
   return (
     <div className="App">
       <input
