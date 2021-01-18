@@ -1,7 +1,10 @@
 {
   "name": "svg-calendar-generator",
   "version": "0.1.0",
-  "private": true,
+  "repository": "git@github.com:akx/svg-calendar-generator.git",
+  "homepage": "https://akx.github.io/svg-calendar-generator/",
+  "author": "Aarni Koskela <akx@iki.fi>",
+  "license": "MIT",
   "dependencies": {
     "date-fns": "2.16.1",
     "react": "^17.0.1",
