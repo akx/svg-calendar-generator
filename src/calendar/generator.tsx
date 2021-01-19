@@ -4,6 +4,7 @@ import localeData from "./localeData";
 import { defaultSettings, Settings } from "./settings";
 
 function generateSVGCalendar(date: Date, settings: Partial<Settings>) {
+  const effectiveSettings = { ...defaultSettings, ...settings };
   const {
     pageWidth,
     pageHeight,
@@ -15,7 +16,7 @@ function generateSVGCalendar(date: Date, settings: Partial<Settings>) {
     textXAdj,
     textYAdj,
     weekdaySize,
-  } = { ...defaultSettings, ...settings };
+  } = effectiveSettings;
   const locale = localeData[settings.locale || "en"] || localeData.en;
 
   const textXOff = boxWidth / 2 + textXAdj;
@@ -65,7 +66,7 @@ function generateSVGCalendar(date: Date, settings: Partial<Settings>) {
       );
     }
   }
-  return (
+  const element = (
     <svg viewBox={`0 0 ${pageWidth} ${pageHeight}`}>
       <g transform="translate(20 30)">
         {headings}
@@ -73,6 +74,7 @@ function generateSVGCalendar(date: Date, settings: Partial<Settings>) {
       </g>
     </svg>
   );
+  return { element, effectiveSettings };
 }
 
 export default generateSVGCalendar;
