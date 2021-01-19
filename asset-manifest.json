@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/svg-calendar-generator/static/css/main.bed9c162.chunk.css",
-    "main.js": "/svg-calendar-generator/static/js/main.d19a5150.chunk.js",
-    "main.js.map": "/svg-calendar-generator/static/js/main.d19a5150.chunk.js.map",
+    "main.css": "/svg-calendar-generator/static/css/main.0a2b8f55.chunk.css",
+    "main.js": "/svg-calendar-generator/static/js/main.de3a9066.chunk.js",
+    "main.js.map": "/svg-calendar-generator/static/js/main.de3a9066.chunk.js.map",
     "runtime-main.js": "/svg-calendar-generator/static/js/runtime-main.286fd815.js",
     "runtime-main.js.map": "/svg-calendar-generator/static/js/runtime-main.286fd815.js.map",
-    "static/js/2.52dee6d4.chunk.js": "/svg-calendar-generator/static/js/2.52dee6d4.chunk.js",
-    "static/js/2.52dee6d4.chunk.js.map": "/svg-calendar-generator/static/js/2.52dee6d4.chunk.js.map",
+    "static/js/2.cad1f14d.chunk.js": "/svg-calendar-generator/static/js/2.cad1f14d.chunk.js",
+    "static/js/2.cad1f14d.chunk.js.map": "/svg-calendar-generator/static/js/2.cad1f14d.chunk.js.map",
     "index.html": "/svg-calendar-generator/index.html",
-    "static/css/main.bed9c162.chunk.css.map": "/svg-calendar-generator/static/css/main.bed9c162.chunk.css.map",
-    "static/js/2.52dee6d4.chunk.js.LICENSE.txt": "/svg-calendar-generator/static/js/2.52dee6d4.chunk.js.LICENSE.txt"
+    "static/css/main.0a2b8f55.chunk.css.map": "/svg-calendar-generator/static/css/main.0a2b8f55.chunk.css.map",
+    "static/js/2.cad1f14d.chunk.js.LICENSE.txt": "/svg-calendar-generator/static/js/2.cad1f14d.chunk.js.LICENSE.txt",
+    "static/media/styles.css": "/svg-calendar-generator/static/media/david-van-dijk-3LTht2nxd34-unsplash.b442722d.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.286fd815.js",
-    "static/js/2.52dee6d4.chunk.js",
-    "static/css/main.bed9c162.chunk.css",
-    "static/js/main.d19a5150.chunk.js"
+    "static/js/2.cad1f14d.chunk.js",
+    "static/css/main.0a2b8f55.chunk.css",
+    "static/js/main.de3a9066.chunk.js"
   ]
 }
