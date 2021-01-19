@@ -2,11 +2,12 @@ import * as React from "react";
 import * as ReactDOMServer from "react-dom/server";
 import "./styles.css";
 import * as dfn from "date-fns";
-import SVGCalendar, { defaultSettings } from "./SVGCalendar";
+import SVGCalendar from "./SVGCalendar";
 import { useTweaks } from "use-tweaks";
+import { settingsTweakSchema } from "./calendar/settings";
 
 export default function App() {
-  const settings = useTweaks({ ...defaultSettings });
+  const settings = useTweaks(settingsTweakSchema);
   const [date, setDate] = React.useState(() => new Date());
   const el = <SVGCalendar date={date} settings={settings} />;
   return (
